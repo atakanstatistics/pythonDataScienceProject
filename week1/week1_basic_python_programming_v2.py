@@ -510,6 +510,7 @@ set2.issuperset(set1)
 
 # Deneme
 # Deneme2
+# Deneme3
 
 ###############################################
 # FONKSİYONLAR, KOŞULLAR, DÖNGÜLER, COMPREHENSIONS
