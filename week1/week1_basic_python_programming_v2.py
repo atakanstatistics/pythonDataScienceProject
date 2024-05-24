@@ -511,6 +511,7 @@ set2.issuperset(set1)
 # Deneme
 # Deneme2
 # Deneme3
+print("Burada Güncelleme Yapılmıştır.")
 
 ###############################################
 # FONKSİYONLAR, KOŞULLAR, DÖNGÜLER, COMPREHENSIONS
