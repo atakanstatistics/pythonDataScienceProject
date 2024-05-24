@@ -22,6 +22,7 @@
 # string
 print("Hello AI Era")
 
+
 # integer
 9
 
@@ -508,6 +509,7 @@ set2.issuperset(set1)
 
 
 # Deneme
+# Deneme2
 
 ###############################################
 # FONKSİYONLAR, KOŞULLAR, DÖNGÜLER, COMPREHENSIONS
