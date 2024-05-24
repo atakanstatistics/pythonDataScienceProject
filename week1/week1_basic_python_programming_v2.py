@@ -506,6 +506,9 @@ set1.issubset(set2)
 
 set2.issuperset(set1)
 
+
+# Deneme
+
 ###############################################
 # FONKSİYONLAR, KOŞULLAR, DÖNGÜLER, COMPREHENSIONS
 ###############################################
