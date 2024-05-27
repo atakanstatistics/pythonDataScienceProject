@@ -630,7 +630,7 @@ add_element(180, 1)
 def divide(a, b=1):
     print(a / b)
 
-divide(9)
+divide(19)
 
 
 
@@ -712,6 +712,7 @@ add_element(10, 8)
 # DoT (Do one Thing)
 # Modularity
 
+# 49:16 da kalındı
 
 ###############################################
 # KOŞULLAR (CONDITIONS)
