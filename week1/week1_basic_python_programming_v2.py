@@ -857,6 +857,7 @@ while number < 9:
 #######################
 
 # Amaç: Aşağıdaki şekilde string'i değiştirmek istiyoruz.
+# Çift indexlerde olanları büyüt tek indexlerde olan ifadeleri küçült
 
 # before: "hi my name is john and i am learning python"
 # after: "Hi mY NaMe iS JoHn aNd i aM LeArNiNg pYtHoN"
@@ -869,15 +870,14 @@ def alternating(string):
             new_string += string[string_index].upper()
         else:
             new_string += string[string_index].lower()
-
     print(new_string)
 
 alternating("hi my name is john and i am learning python")
-
-
+alternating("Ben berili çok ama çok seviyorum") #burası sevgilime fonksiyonu anlatmak için yazılmıştır :)
 alternating("mvk")
-
-
+alternating("atakan")
+#range sayı dizisi oluşturmaya yarıyor.
+print(range(len("atakan")))
 
 #######################
 # Enumerate: Otomatik Counter/Indexer ile for loop
@@ -1075,6 +1075,8 @@ students_no = ["John", "Venessa"]
 [student.upper() if student not in students_no else student.lower() for student in students]
 
 [student.lower() if student in students_no else student.upper() for student in students]
+
+# 2:00:00 kaldı 1079
 
 #######################
 # Dictionary Comprehension
