@@ -712,7 +712,6 @@ add_element(10, 8)
 # DoT (Do one Thing)
 # Modularity
 
-# 49:16 da kalındı
 
 ###############################################
 # KOŞULLAR (CONDITIONS)
