@@ -1076,7 +1076,7 @@ students_no = ["John", "Venessa"]
 
 [student.lower() if student in students_no else student.upper() for student in students]
 
-# 2:00:00 kaldı 1079
+
 
 #######################
 # Dictionary Comprehension
@@ -1341,3 +1341,5 @@ num_cols = [col for col in df.columns if df[col].dtype in [int, float]]
 df[num_cols]
 
 {row[0]: [int(s) for s in row[1:]] for row in df[num_cols].values}
+
+#Son
