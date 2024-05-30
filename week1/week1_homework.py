@@ -26,44 +26,69 @@
 ###############################################
 # Görev 1: Kendi isminizde bir virtual environment oluşturunuz oluşturma esnasında python 3 kurulumu yapınız.
 ###############################################
+"""
+conda create -n atakan python=3
+"""
+from typing import List, Any
 
 ###############################################
 # Görev 2: Oluşturduğunuz environment'ı aktif ediniz.
 ###############################################
-
+"""
+conda activate atakan
+"""
 ###############################################
 # Görev 3: Yüklü paketleri listeleyiniz.
 ###############################################
-
+"""
+conda list
+"""
 ###############################################
 # Görev 4: Environment içerisine Numpy'ın güncel versiyonunu ve Pandas'ın 1.2.1 versiyonunu aynı anda indiriniz.
 ###############################################
-
+"""
+conda install Numpy Pandas=1.2.1
+"""
 ###############################################
 # Görev 5: İndirilen Numpy'ın versiyonu nedir?
 ###############################################
-
+"""
+conda search Numpy
+"""
 ###############################################
 # Görev 6: Pandas'ı upgrade ediniz. Yeni versiyon nedir?
 ###############################################
-
+"""
+conda upgrade pandas
+"""
 ###############################################
 # Görev 7: Numpy'ı environment'tan siliniz.
 ###############################################
-
+"""
+conda remove numpy
+"""
 ###############################################
 # Görev 8: Seaborn kütüphanesini ve matplotlib kütüphanesini aynı anda güncel versiyonları ile indiriniz.
 ###############################################
-
+"""
+conda install seaborn matplotlib
+"""
 ###############################################
 # Görev 9: Virtual environment içindeki kütüphaneleri versiyon bilgisi ile beraber export ediniz ve yaml dosyasını inceleyiniz.
 ###############################################
-
+"""
+conda env export > environment.yaml
+conda env create -f environment.yaml
+"""
 ###############################################
 # Görev 10: Oluşturduğunuz environment'i siliniz.
 ###############################################
 # İpucu: Önce environment'i deactivate ediniz.
 
+"""
+conda deactivate
+conda env remove -n atakan
+"""
 
 
 
@@ -94,12 +119,15 @@ df.columns
 # Notlar:
 # Numerik olmayanların da isimleri büyümeli.
 # Tek bir list comp yapısı ile yapılmalı.
-
+# car_crashes verisindeki numeric değişkenlerin isimlerini büyük harfe çeviriniz ve başına NUM ekleyiniz.
 
 ###############################################
 # Görev 1 Çözüm
 ###############################################
 
+#[col for col in df.columns if df[col].dtype != "O"]
+
+["NUM_" + col.upper() if df[col].dtype != "O" else col.upper() for col in df.columns]
 
 ###############################################
 # Görev 2: İsminde "no" BARINDIRMAYAN değişkenlerin isimlerininin SONUNA "FLAG" yazınız.
@@ -108,6 +136,7 @@ df.columns
 # Notlar:
 # Tüm değişken isimleri büyük olmalı.
 # Tek bir list comp ile yapılmalı.
+# Görev 2: İsminde "no" BARINDIRMAYAN değişkenlerin isimlerininin SONUNA "FLAG" yazınız.
 
 # Beklenen çıktı:
 
@@ -124,6 +153,9 @@ df.columns
 # Görev 2 Çözüm
 ###############################################
 
+# df.columns
+# [col for col in df.columns if "no" in col]
+[col.upper() if "no" in col else col.upper() + "_FLAG" for col in df.columns]
 
 ###############################################
 # Görev 3: Aşağıda verilen değişken isimlerinden FARKLI olan değişkenlerin isimlerini seçerek yeni bir df oluşturunuz.
@@ -151,3 +183,10 @@ df.columns
 ###############################################
 # Görev 3 Çözüm
 ###############################################
+
+
+df.columns
+og_list = ["abbrev", "no_previous"]
+new_cols = df.columns.difference(og_list)
+new_df = df[new_cols]
+new_df.head()
